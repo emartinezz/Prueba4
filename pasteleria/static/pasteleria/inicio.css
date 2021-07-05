@@ -1,0 +1,47 @@
+body{
+
+    background-image: url(fondo.jpg);
+}
+
+
+
+footer{
+    color: blueviolet;
+    
+
+}
+
+#navegacion{
+
+    max-width: none;
+    background-color: black;
+    
+
+}
+
+#navegacion a{
+
+    color: blueviolet;
+    
+    
+
+}
+
+
+
+#pie{
+
+    max-width: none; 
+    
+
+}
+
+#Cake_House{
+
+    padding-top: 0;
+
+}
+
+
+
+

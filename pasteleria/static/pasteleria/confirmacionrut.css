@@ -1,0 +1,35 @@
+
+
+body {margin:0;}
+
+h1 {
+  position:relative;
+  margin:0px auto;
+  width:auto;
+  padding-bottom:0px;
+  font-size:4.1rem;
+  font-weight:300;
+  letter-spacing: -0.15rem;
+  color:#FFF
+}
+
+header {
+
+  text-align:center;
+  padding:10px;
+}
+header p {color:#96b5b4;}
+
+#wrapper {
+  width : 90%;
+  margin : 0px auto;
+}
+
+#msgerror {
+	font-size:1.4em;
+}
+.boton{
+  margin-left: 240px;
+  margin-top: -60px;
+  background-color: #977614;
+}

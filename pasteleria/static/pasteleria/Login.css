@@ -1,0 +1,40 @@
+#Tarjeta{
+    width :415px;
+    height:370px;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-right: 25px;
+    margin-top: 13%;
+
+   border-radius: 15px;
+   color:  blueviolet;
+   background-color: rgb(255, 255, 255)
+
+}
+#registro{
+    color: blueviolet;
+   margin-left: 100px;
+}
+#foto{
+    margin-left: 40%;
+ 
+}
+
+#icono{
+    margin-top: 15%;
+ }
+ #usuairofoto{
+
+margin-left: 125px;
+margin-top: -60px;
+
+}
+#botone{
+    background-color: #FFC312;
+    margin-left: 90px;
+    
+}
+#link{
+    margin-left: 50px;
+}
+
