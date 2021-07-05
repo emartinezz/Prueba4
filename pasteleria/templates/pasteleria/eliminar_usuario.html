@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Cake house</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/tarjeta.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/estilos.css' %}">
+  <link rel="shortcut icon" href="{% static 'pasteleria/imagen/logocake.png' %}">
+
+</head>
+
+<body>
+
+  <div id="Tarjeta" class="container mx-auto " style="height: 300px;">
+    <h3 id="registro" class="text-center">Borrar cuenta</h3>
+
+
+
+    <form id="textos" action="{% url 'pasteleria:eliminar_datos' %}" method="POST" class="container" style="width: 90%; height: 90%;">
+      {% csrf_token %}
+     
+      <div class="container pt-2">
+        <label>Rut</label>
+        <input type="text" id="rut" name="rut" class="form-control" required maxlength="12"
+          placeholder="Ingrese RUT " style="border-color: black;" >
+      </div>
+      <label class="ml-3 mt-4" for="">Su cuenta se borrara automaticamente</label>
+
+      <input type="reset" value="Borrar datos" class="btn float reiniciar ml-4 mt-3" style="background-color: blue; color: white;">
+
+      <input type="submit" value="Confirmar" class="btn float iniciar ml-4 mt-3" style="background-color: blue; color: white;">
+      <label id="tag">Su cuenta se eliminara</label>
+      
+    </form>
+
+  </div>
+  </article>
+
+  <script src="{% static 'pasteleria/js/jquery-3.6.0.min.js'%}"></script>
+  <script src="{% static 'pasteleria/js/bootstrap.min.js'%}"></script>
+  
+</body>
+
+</html>

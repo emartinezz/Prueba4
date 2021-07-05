@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/Login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/inicio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/estilos.css' %}">
+    <link rel="shortcut icon" href="{% static 'pasteleria/imagen/logocake.png' %}">
+
+    <title>Cake House</title>
+
+  </head>
+
+  <body >    
+       
+       
+
+ 
+
+      <div  id="Tarjeta" class="container mx-auto" style="height: 400px;">
+        <img id="usuairofoto"src="{% static 'pasteleria/imagen/usuario21.png'%}" alt="">
+        <h3 id="registro">Iniciar Sesion</h3>
+
+       
+        <form action="{% url 'pasteleria:validación' %}" method="POST" class="mx-auto " class="container" style="width: 80%;" >
+            {% csrf_token %}
+            <div class="container ">
+              <label for="frame">Rut</label>
+              <input type="text" id="rut" name="rut" class="form-control" required placeholder="Ingrese RUT "style="border-color: black;" maxlength="12">
+            </div>
+                <br>
+            <div class="container ">
+                <label>Contraseña</label>
+                <br>
+                <input  type="password" class="form-control" style="border-color: black;" required name="Contraseña">
+            </div>
+              <br class="container"> 
+              <button id="botone" type="submit"  class="btn float iniciar" style="width: 40%;border-color: black;">Confirmar</button>
+              <br>
+    
+              <a class="pl-3" id="link" href="{% url 'pasteleria:registro' %}">Aqui puedes registrarte</a>
+              <br>
+              <a class="pl-5" href="{% url 'pasteleria:editar' %}">Configurar datos personales</a>
+        </form>
+      </div>
+   
+
+
+    
+    <script src="{% static 'pasteleria/js/jquery-3.6.0.min.js'%}"></script>
+    <script src="{% static 'pasteleria/js/bootstrap.min.js'%}"></script>
+    
+  </body>
+
+  
+
+</html>

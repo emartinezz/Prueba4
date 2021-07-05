@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/Login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/inicio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/estilos.css' %}">
+    <link rel="shortcut icon" href="{% static 'pasteleria/imagen/logocake.png' %}">
+    <link rel="stylesheet" href="{% static 'pasteleria/configurar.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="Tarjeta" class="container mx-auto" style="height: 400px;">
+        <img id="usuairofoto"src="{% static 'pasteleria/imagen/usuario21.png'%}" alt="">
+        <h3 id="registro">Antes de actuar</h3>
+
+       
+        <form  method="POST" class="mx-auto mt-5" class="container" style="width: 80%;" >
+            {% csrf_token %}
+            
+    
+              <label for=""class="pl-3" id="link">Quieres editar tus datos?</label>
+              <br>
+              <a href="{% url 'pasteleria:editar_usuario' %}" type="submit" id="mover" class="mb-5 btn btn-primary">Editar</a>
+              <br>
+              <label id="link2" class="pl-5" >Quieres eliminar tu cuenta?</label>
+              <a href="{% url 'pasteleria:eliminar_usuario' %}" type="button" id="mover" class="btn btn-primary">Eliminar</a>
+        </form>
+      </div>
+
+
+      <script src="{% static 'pasteleria/js/jquery-3.6.0.min.js'%}"></script>
+    <script src="{% static 'pasteleria/js/bootstrap.min.js'%}"></script>
+</body>
+</html>

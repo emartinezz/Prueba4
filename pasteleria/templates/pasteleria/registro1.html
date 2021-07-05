@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Cake house</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/registro.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'pasteleria/estilos.css' %}">
+  <link rel="shortcut icon" href="{% static 'pasteleria/imagen/logocake.png' %}">
+
+</head>
+
+<body>
+
+  <div id="Tarjeta" class="container mx-auto">
+    <h3 id="registro" class="text-center">Registrarse</h3>
+
+
+
+    <form id="textos" action="{% url 'pasteleria:indexReturn' %}" method="POST" class="container" style="width: 80%;">
+      {% csrf_token %}
+      <div class="container pt-1">
+        <label for="frame">Nombre</label>
+        <input id="txt-Nombre" type="text" class="form-control" required style="border-color: black;" placeholder="Ingrese su nombre" name="Nombre">
+        
+      </div>
+      <div class="container pt-2">
+        <label>Apellido </label>
+        <input id="txt-Apellido" type="text" class="form-control" required style="border-color: black;" placeholder="Ingrese su apellido" name="Apellido">
+      </div>
+      <div class="container pt-2">
+        <label>Rut</label>
+        <input type="text" id="rut" name="rut" class="form-control" required maxlength="12"
+          placeholder="Ingrese RUT " style="border-color: black;" >
+        
+        
+      </div>
+
+      <div class="container pt-2">
+        <label>Contraseña</label>
+        <input id="txt-Contraseña" type="password" class="form-control" required style="border-color: black;" placeholder="Ingrese una contraseña" name="Contraseña">
+      </div>
+
+      <div class="container pt-2">
+      <label>Correo</label>
+      <input id="txt-correo" type="text" class="form-control" required style="border-color: black;" placeholder="algo@algo.com" name="Correo">
+      </div>
+
+      <div class="container pt-2">
+      <label>Telefono</label>
+      <input id="txt-telefono" type="text" class="form-control" required style="border-color: black;" placeholder="+569********" name="Telefono">
+      </div>
+
+      <br>
+      <input type="reset" value="Borrar datos" class="btn float reiniciar ml-3" style="background-color: blue; color: white;">
+
+      <input type="submit" value="Confirmar" class="btn float iniciar" style="background-color: blue; color: white;">
+
+    </form>
+
+  </div>
+  </article>
+
+  <script src="{% static 'pasteleria/js/jquery-3.6.0.min.js'%}"></script>
+  <script src="{% static 'pasteleria/js/bootstrap.min.js'%}"></script>
+  
+</body>
+
+</html>
